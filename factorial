@@ -1,0 +1,11 @@
+#!/usr/bin/tclsh
+gets stdin n
+proc fun { n } {
+if { $n == 0 } {
+return 1
+} else { #puts $n
+return [expr $n*[fun [expr $n-1]] ]
+}
+}
+set s [fun $n]
+puts $s
